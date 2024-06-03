@@ -13,5 +13,8 @@ window = sg.Window("File Compresser",
                    layout=[[label1, input1, choose_button1],
                            [label2, input2, choose_button2],
                            [compress_button]])
-window.read()
+while True:
+    event, values = window.read()
+    print(event, values)
+
 window.close()
