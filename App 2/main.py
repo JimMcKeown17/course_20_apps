@@ -15,19 +15,20 @@ with col2:
 
 st.write("Below you can find some of the apps I have built in Python. Please feel free to contact me.")
 
-col3, col4 = st.columns(2)
+col3, empty_col, col4 = st.columns([1.5,0.5,1.5])
 
 data = pd.read_csv("data.csv", sep=";")
 
 with col3:
     for index,row in data[:10].iterrows():
         st.header(row['title'])
-        # st.image(f'images/+ {row["image"]}')
+        st.image('images/' + row["image"])
         st.write(row['description'])
-        st.write(row['url'])
+        st.write(f"[Source Code]({row['url']})")
 
 with col4:
     for index,row in data[10:].iterrows():
         st.header(row['title'])
+        st.image('images/' + row["image"])
         st.write(row['description'])
-        st.write(row['url'])
+        st.write(f"[Source Code]({row['url']})")
