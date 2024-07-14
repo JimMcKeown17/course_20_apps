@@ -30,7 +30,7 @@ class Email():
         port = 465
 
         username = "qhawelamawele@gmail.com"
-        password = "otohevxctnchtxkc"
+        password = "hidden"
 
         receiver = "qhawelamawele@gmail.com"
         context = ssl.create_default_context()
